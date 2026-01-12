@@ -1,0 +1,319 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.515 0.207 259.816);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.918 0.005 256.308);
+  --card: oklch(0.181 0.007 256.848);
+  --card-foreground: oklch(0.918 0.005 256.308);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.918 0.005 256.308);
+  --primary: oklch(0.608 0.195 264.376);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.918 0.005 256.308);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.918 0.005 256.308);
+  --destructive: oklch(0.491 0.185 26.669);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.608 0.195 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* OpenDyslexic Font - Improves readability for users with dyslexia */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("https://cdn.jsdelivr.net/npm/opendyslexic@2.0.1/fonts/OpenDyslexic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("https://cdn.jsdelivr.net/npm/opendyslexic@2.0.1/fonts/OpenDyslexic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Dyslexic font mode - Applies OpenDyslexic globally */
+.dyslexic-font,
+.dyslexic-font * {
+  font-family: var(--font-dyslexic) !important;
+}
+
+/* Easy Read mode - Larger text, more spacing, simplified language */
+.easy-read-mode {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+.easy-read-mode h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.easy-read-mode h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.easy-read-mode h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.easy-read-mode p,
+.easy-read-mode li {
+  margin-bottom: 1.5rem;
+}
+
+/* High contrast mode - Maximum readability */
+.high-contrast-mode {
+  --color-background: oklch(0 0 0);
+  --color-foreground: oklch(1 0 0);
+  --color-card: oklch(0 0 0);
+  --color-card-foreground: oklch(1 0 0);
+  --color-primary: oklch(0.9 0.2 100);
+  --color-primary-foreground: oklch(0 0 0);
+  --color-secondary: oklch(1 0 0);
+  --color-secondary-foreground: oklch(0 0 0);
+  --color-border: oklch(1 0 0);
+  --color-muted: oklch(0.2 0 0);
+  --color-muted-foreground: oklch(0.9 0 0);
+}
+
+/* Text size utilities */
+.text-size-small {
+  font-size: 0.875rem !important;
+}
+
+.text-size-small h1 {
+  font-size: 2rem !important;
+}
+
+.text-size-small h2 {
+  font-size: 1.5rem !important;
+}
+
+.text-size-medium {
+  font-size: 1rem !important;
+}
+
+.text-size-medium h1 {
+  font-size: 2.25rem !important;
+}
+
+.text-size-medium h2 {
+  font-size: 1.875rem !important;
+}
+
+.text-size-large {
+  font-size: 1.125rem !important;
+}
+
+.text-size-large h1 {
+  font-size: 2.5rem !important;
+}
+
+.text-size-large h2 {
+  font-size: 2rem !important;
+}
+
+.text-size-extra-large {
+  font-size: 1.25rem !important;
+}
+
+.text-size-extra-large h1 {
+  font-size: 3rem !important;
+}
+
+.text-size-extra-large h2 {
+  font-size: 2.25rem !important;
+}
+
+/* Line spacing utilities */
+.line-spacing-normal {
+  line-height: 1.5 !important;
+}
+
+.line-spacing-relaxed {
+  line-height: 1.75 !important;
+}
+
+.line-spacing-loose {
+  line-height: 2 !important;
+}
+
+/* Letter spacing utilities */
+.letter-spacing-normal {
+  letter-spacing: 0 !important;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 0.025em !important;
+}
+
+.letter-spacing-wider {
+  letter-spacing: 0.05em !important;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+html.reduce-motion {
+  scroll-behavior: auto;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid rgb(var(--color-ring));
+  outline-offset: 2px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ensure proper contrast in dark mode */
+.dark .bg-gradient-to-br {
+  @apply from-slate-900 via-slate-800 to-slate-900;
+}
+
+.dark .text-muted-foreground {
+  @apply text-slate-400;
+}
+
+/* Card improvements for better visual hierarchy */
+.dark .bg-card {
+  @apply bg-slate-800/50;
+}
+
+/* Button hover states */
+.dark button:hover {
+  @apply brightness-110;
+}

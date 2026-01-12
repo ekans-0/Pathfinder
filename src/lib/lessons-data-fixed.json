@@ -1,0 +1,181 @@
+[
+  {
+    "id": "c1-m1-l1",
+    "module_id": "11111111-1111-1111-1111-111111111111",
+    "title": "What Is a Disability?",
+    "content": {
+      "sections": [
+        {
+          "type": "text",
+          "heading": "What is a Disability?",
+          "content": "A disability is any physical, mental, sensory, or cognitive condition that affects how a person performs certain activities or interacts with their environment. Disabilities can be temporary or permanent, mild or severe, and may impact learning, communication, mobility, or daily living tasks."
+        },
+        {
+          "type": "text",
+          "heading": "Visible vs. Invisible Disabilities",
+          "content": "Visible disabilities are those that others can notice, like using a wheelchair, having a prosthetic limb, or experiencing mobility challenges.\n\nInvisible disabilities are not immediately apparent and may include conditions like learning disabilities, ADHD, mental health disorders, chronic pain, or diabetes. Just because a disability is invisible does not make it any less real or impactful."
+        },
+        {
+          "type": "text",
+          "heading": "Models of Disability",
+          "content": "Understanding disability can be approached in two main ways:\n\n- **Medical Model**: Disability is seen as a problem within the individual that needs to be fixed or cured. This model focuses on treatment, therapy, or medication.\n- **Social Model**: Disability is seen as a mismatch between the individual and society. Barriers—like inaccessible buildings, rigid policies, or social stigma—create disability. The social model emphasizes changing society to include everyone."
+        },
+        {
+          "type": "scenario",
+          "title": "A Day in the Park",
+          "avatars": [
+            {
+              "name": "Alex",
+              "description": "Wheelchair User",
+              "emoji": "🧑‍🦽",
+              "dialogue": "I love coming here, but the sidewalk has some cracks that make it hard for me to roll my wheelchair. I wish it was smoother so I could get around safely."
+            },
+            {
+              "name": "Sam",
+              "description": "Invisible Disability, ADHD",
+              "emoji": "🎒",
+              "dialogue": "I get distracted easily. When I want to join the picnic area, I sometimes forget where I left my things. It's frustrating when people don't notice that I need reminders."
+            },
+            {
+              "name": "Jordan",
+              "description": "No Visible Disability",
+              "emoji": "😊",
+              "dialogue": "I didn't even notice the cracks or distractions! I guess everyone experiences the park differently."
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary": [
+      { "term": "Disability", "definition": "A physical, mental, sensory, or cognitive condition that limits activities or interactions with the environment." },
+      { "term": "Visible Disability", "definition": "A disability that is noticeable to others." },
+      { "term": "Invisible Disability", "definition": "A disability that is not immediately noticeable to others." },
+      { "term": "Medical Model", "definition": "A view of disability as a problem within the individual that requires fixing." },
+      { "term": "Social Model", "definition": "A view of disability as a result of societal barriers, emphasizing societal change." }
+    ],
+    "quiz": [
+      { "question": "Which of the following is a visible disability?", "options": ["ADHD", "Using a wheelchair", "Anxiety", "Diabetes"], "answer": "Using a wheelchair" },
+      { "question": "Which model of disability focuses on changing society rather than the individual?", "options": ["Medical model", "Social model"], "answer": "Social model" },
+      { "question": "True or False: Invisible disabilities are less real than visible disabilities.", "options": ["True", "False"], "answer": "False" },
+      { "question": "What might be considered a social barrier for someone with a mobility disability?", "options": ["Cracked sidewalks", "Medications", "Therapy", "Learning a skill"], "answer": "Cracked sidewalks" }
+    ],
+    "flashcards": [
+      { "question": "What is the Social Model of disability?", "answer": "The view that disability is a result of societal barriers, emphasizing societal change." },
+      { "question": "Give an example of an invisible disability.", "answer": "ADHD, learning disabilities, mental health disorders, or chronic pain." }
+    ]
+  },
+  {
+    "id": "c1-m1-l2",
+    "module_id": "11111111-1111-1111-1111-111111111111",
+    "title": "What Are Disability Rights?",
+    "content": {
+      "sections": [
+        {
+          "type": "text",
+          "heading": "What Are Disability Rights?",
+          "content": "Disability rights are legal protections that ensure people with disabilities can live, learn, and work on an equal basis with others. These rights aim to prevent discrimination, promote inclusion, and remove barriers that limit participation in society."
+        },
+        {
+          "type": "list",
+          "heading": "Areas Covered by Disability Rights",
+          "items": [
+            "Education – Equal access to schools and support services.",
+            "Employment – Protections against discrimination in hiring and promotions.",
+            "Public Services – Access to transportation, parks, and buildings.",
+            "Healthcare – Equal access to medical care and communication aids.",
+            "Voting – Accessible voting processes."
+          ]
+        },
+        {
+          "type": "scenario",
+          "title": "A Day of Rights in Action",
+          "avatars": [
+            {
+              "name": "Taylor",
+              "description": "Student, uses a cane",
+              "emoji": "🦯",
+              "dialogue": "I need extra time on tests and my classroom materials in large print. My teacher provided these accommodations after I spoke up about my disability, thanks to my rights under IDEA and ADA."
+            },
+            {
+              "name": "Riley",
+              "description": "Employee, has ADHD",
+              "emoji": "💻",
+              "dialogue": "I asked my manager for a quieter workspace to focus better. They provided it, following disability employment laws. Now I can work efficiently and fairly."
+            },
+            {
+              "name": "Jordan",
+              "description": "Teacher/Manager",
+              "emoji": "👨‍🏫",
+              "dialogue": "I make sure my classroom and office are accessible. Providing accommodations isn't a favor—it's a legal responsibility and a way to ensure equality for everyone."
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary": [
+      { "term": "Disability Rights", "definition": "Legal protections and guarantees for individuals with disabilities, ensuring equality and access." },
+      { "term": "ADA", "definition": "Americans with Disabilities Act - A federal law prohibiting discrimination against people with disabilities." },
+      { "term": "IDEA", "definition": "Individuals with Disabilities Education Act - Federal law guaranteeing special education services." },
+      { "term": "Accommodation", "definition": "Adjustments or modifications that allow individuals with disabilities to participate equally." },
+      { "term": "Inclusion", "definition": "Creating environments where all individuals can participate fully, regardless of ability." }
+    ],
+    "quiz": [
+      { "question": "Which law provides federal protections in schools, work, and public spaces?", "options": ["ADA", "Civil Rights Act", "Fair Labor Standards Act"], "answer": "ADA" },
+      { "question": "What is an example of a disability right in employment?", "options": ["Unpaid work", "Reasonable accommodations", "Guaranteed promotion"], "answer": "Reasonable accommodations" },
+      { "question": "True or False: Disability rights only apply to visible disabilities.", "options": ["True", "False"], "answer": "False" }
+    ],
+    "flashcards": [
+      { "question": "What does ADA stand for?", "answer": "Americans with Disabilities Act" },
+      { "question": "What is an accommodation?", "answer": "Adjustments or modifications that allow individuals with disabilities to participate equally." }
+    ]
+  },
+  {
+    "id": "c1-m2-l1",
+    "module_id": "22222222-2222-2222-2222-222222222222",
+    "title": "IEP vs 504 Plans",
+    "content": {
+      "sections": [
+        {
+          "type": "text",
+          "heading": "What is an IEP?",
+          "content": "An IEP (Individualized Education Program) is a legally binding plan for students with disabilities that affect learning. It provides special education services and tailored instruction."
+        },
+        {
+          "type": "text",
+          "heading": "What is a 504 Plan?",
+          "content": "A 504 Plan provides accommodations to ensure access to learning but does not provide special education services. It can be used for both visible and invisible disabilities."
+        },
+        {
+          "type": "scenario",
+          "title": "Choosing the Right Plan",
+          "avatars": [
+            {
+              "name": "Sam",
+              "description": "Student with ADHD",
+              "emoji": "🎒",
+              "dialogue": "I struggle to focus and complete tests on time. I need extra time but not special instruction. A 504 Plan is right for me."
+            },
+            {
+              "name": "Alex",
+              "description": "Student in Wheelchair",
+              "emoji": "🧑‍🦽",
+              "dialogue": "I need speech therapy and a specially adapted classroom. I need an IEP for these specialized services."
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary": [
+      { "term": "IEP", "definition": "Individualized Education Program - A plan for special education services." },
+      { "term": "504 Plan", "definition": "A plan that provides accommodations for access to learning." }
+    ],
+    "quiz": [
+      { "question": "Which plan provides special education services?", "options": ["504 Plan", "IEP", "Both"], "answer": "IEP" },
+      { "question": "True or False: A 504 Plan can help students with ADHD.", "options": ["True", "False"], "answer": "True" }
+    ],
+    "flashcards": [
+      { "question": "Which law governs IEPs?", "answer": "IDEA (Individuals with Disabilities Education Act)" },
+      { "question": "Which law governs 504 Plans?", "answer": "Section 504 of the Rehabilitation Act" }
+    ]
+  }
+]
