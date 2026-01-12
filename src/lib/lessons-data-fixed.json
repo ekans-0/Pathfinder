@@ -1,6 +1,6 @@
 [
   {
-    "id": "c1-m1-l1",
+    "id": "01010101-0101-0101-0101-010101010101",
     "module_id": "11111111-1111-1111-1111-111111111111",
     "title": "What Is a Disability?",
     "content": {
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "id": "c1-m1-l2",
+    "id": "01010101-0101-0101-0101-010101010102",
     "module_id": "11111111-1111-1111-1111-111111111111",
     "title": "What Are Disability Rights?",
     "content": {
@@ -130,7 +130,7 @@
     ]
   },
   {
-    "id": "c1-m2-l1",
+    "id": "02020202-0202-0202-0202-020202020201",
     "module_id": "22222222-2222-2222-2222-222222222222",
     "title": "IEP vs 504 Plans",
     "content": {
@@ -176,6 +176,154 @@
     "flashcards": [
       { "question": "Which law governs IEPs?", "answer": "IDEA (Individuals with Disabilities Education Act)" },
       { "question": "Which law governs 504 Plans?", "answer": "Section 504 of the Rehabilitation Act" }
+    ]
+  },
+  {
+    "id": "02020202-0202-0202-0202-020202020202",
+    "module_id": "22222222-2222-2222-2222-222222222222",
+    "title": "Self-Advocacy in Schools",
+    "content": {
+      "sections": [
+        {
+          "type": "text",
+          "heading": "What is Self-Advocacy?",
+          "content": "Self-advocacy means speaking up for yourself and your needs. In school, this involves understanding your disability, knowing what help you need, and communicating effectively with teachers and staff."
+        },
+        {
+          "type": "list",
+          "heading": "Key Steps to Self-Advocacy",
+          "items": [
+            "Know your strengths and challenges.",
+            "Understand your IEP or 504 Plan.",
+            "Participate in your own meetings (like IEP meetings).",
+            "Ask for help when you need it.",
+            "Explain how an accommodation helps you learn."
+          ]
+        },
+        {
+          "type": "scenario",
+          "title": "Speaking Up in Class",
+          "avatars": [
+            {
+              "name": "Taylor",
+              "description": "Student, uses a cane",
+              "emoji": "🦯",
+              "dialogue": "The teacher is writing in small text on the board. I can't see it clearly. I should raise my hand and remind them I need large-print materials or for them to read aloud."
+            },
+            {
+              "name": "Jordan",
+              "description": "Teacher",
+              "emoji": "👨‍🏫",
+              "dialogue": "Oh, thank you for reminding me, Taylor! I'll make sure to provide the large-print copies and read the notes as I write them."
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary": [
+      { "term": "Self-Advocacy", "definition": "The ability to speak up for one's own needs and rights." },
+      { "term": "Disclosure", "definition": "Sharing information about your disability with others to receive accommodations." }
+    ],
+    "quiz": [
+      { "question": "What is the first step in self-advocacy?", "options": ["Knowing your strengths and challenges", "Waiting for someone to help", "Hiding your disability"], "answer": "Knowing your strengths and challenges" },
+      { "question": "True or False: You have the right to attend your own IEP meetings.", "options": ["True", "False"], "answer": "True" }
+    ],
+    "flashcards": [
+      { "question": "What is self-advocacy?", "answer": "Speaking up for your own needs and rights." },
+      { "question": "What is disclosure?", "answer": "Sharing information about your disability to get support." }
+    ]
+  },
+  {
+    "id": "03030303-0303-0303-0303-030303030301",
+    "module_id": "33333333-3333-3333-3333-333333333333",
+    "title": "Rights After High School",
+    "content": {
+      "sections": [
+        {
+          "type": "text",
+          "heading": "The Big Shift",
+          "content": "In K-12, the school is responsible for identifying your disability and providing services (IDEA). After high school, in college or the workplace, the responsibility shifts to YOU. You must disclose your disability and request accommodations under the ADA or Section 504."
+        },
+        {
+          "type": "text",
+          "heading": "Higher Education Rights",
+          "content": "Colleges cannot discriminate against you because of your disability. They must provide reasonable accommodations, such as extended time on tests, note-taking assistance, or accessible housing. However, they do not have to provide 'special education' instruction like in high school."
+        },
+        {
+          "type": "scenario",
+          "title": "Starting College",
+          "avatars": [
+            {
+              "name": "Alex",
+              "description": "New College Student",
+              "emoji": "🎓",
+              "dialogue": "I just started college. I had an IEP in high school, but my professors don't know that. I need to visit the Office of Accessibility Services to show them my documentation and request my accommodations."
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary": [
+      { "term": "Higher Education", "definition": "Education beyond high school, such as college or vocational school." },
+      { "term": "Accessibility Services", "definition": "The office at a college that coordinates accommodations for students with disabilities." }
+    ],
+    "quiz": [
+      { "question": "After high school, who is responsible for asking for accommodations?", "options": ["The school", "The student", "The parents"], "answer": "The student" },
+      { "question": "Which law protects you in higher education?", "options": ["ADA and Section 504", "IDEA", "Neither"], "answer": "ADA and Section 504" }
+    ],
+    "flashcards": [
+      { "question": "Does IDEA apply in college?", "answer": "No, IDEA only applies to K-12 education." },
+      { "question": "What is the Office of Accessibility Services?", "answer": "The college office that helps students with disabilities get accommodations." }
+    ]
+  },
+  {
+    "id": "03030303-0303-0303-0303-030303030302",
+    "module_id": "33333333-3333-3333-3333-333333333333",
+    "title": "Employment Rights & Accommodations",
+    "content": {
+      "sections": [
+        {
+          "type": "text",
+          "heading": "ADA Title I",
+          "content": "Title I of the Americans with Disabilities Act (ADA) protects people with disabilities from discrimination in employment. This applies to hiring, firing, pay, and promotions."
+        },
+        {
+          "type": "text",
+          "heading": "Reasonable Accommodations at Work",
+          "content": "A reasonable accommodation is a change in the workplace or the way things are done that helps a person with a disability do their job. Examples include specialized software, flexible schedules, or modified equipment."
+        },
+        {
+          "type": "text",
+          "heading": "The Interactive Process",
+          "content": "When you request an accommodation, you and your employer should engage in an 'interactive process'—a conversation to find the best solution that meets your needs without causing 'undue hardship' for the employer."
+        },
+        {
+          "type": "scenario",
+          "title": "The Job Interview",
+          "avatars": [
+            {
+              "name": "Riley",
+              "description": "Job Applicant with ADHD",
+              "emoji": "💻",
+              "dialogue": "I'm applying for a data entry job. I don't need to tell them about my ADHD during the interview if it doesn't affect the interview process. But once I'm hired, I might ask for a quiet workspace to help me focus."
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary": [
+      { "term": "ADA Title I", "definition": "The section of the ADA that covers employment rights." },
+      { "term": "Reasonable Accommodation", "definition": "A change in the workplace that helps an employee with a disability do their job." },
+      { "term": "Undue Hardship", "definition": "An action requiring significant difficulty or expense for an employer." },
+      { "term": "Interactive Process", "definition": "A collaborative conversation between employee and employer to determine accommodations." }
+    ],
+    "quiz": [
+      { "question": "What is a 'reasonable accommodation' at work?", "options": ["A change that helps you do your job", "A guaranteed high salary", "Extra vacation time for no reason"], "answer": "A change that helps you do your job" },
+      { "question": "When can an employer deny an accommodation?", "options": ["If they just don't feel like it", "If it causes 'undue hardship'", "If the employee is too young"], "answer": "If it causes 'undue hardship'" }
+    ],
+    "flashcards": [
+      { "question": "What does ADA Title I cover?", "answer": "Employment rights for people with disabilities." },
+      { "question": "What is undue hardship?", "answer": "When an accommodation is too difficult or expensive for an employer to provide." }
     ]
   }
 ]
