@@ -1,13 +1,26 @@
-import { redirect } from "next/navigation"
+import { redirect, notFound } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
 import { AppHeader } from "@/components/app-header"
 import { AccessibilityToolbar } from "@/components/accessibility-toolbar"
 import { LessonContent } from "@/components/lesson-content"
 import { LessonTimeTracker } from "@/components/lesson-time-tracker"
 
-export default async function LessonPage({ params }: { params: Promise<{ lessonId: string }> }) {
-  const { lessonId } = await params
+interface LessonPageProps {
+  params: {
+    lessonId: string
+  }
+}
+
+export default async function LessonPage({ params }: LessonPageProps) {
+  const { lessonId } = params
+
+  if (!lessonId) {
+    notFound()
+  }
+
   const supabase = await createClient()
+
+  /* ---------------- AUTH ---------------- */
   const {
     data: { user },
   } = await supabase.auth.getUser()
@@ -16,48 +29,51 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
     redirect("/auth/login")
   }
 
-  const { data: profile, error: profileError } = await supabase
+  /* ---------------- PROFILE ---------------- */
+  const { data: profile } = await supabase
     .from("profiles")
     .select("*")
     .eq("id", user.id)
     .maybeSingle()
 
   if (!profile) {
-    // If profile doesn't exist, create it
-    const { data: newProfile, error: createError } = await supabase
+    const { error: createError } = await supabase
       .from("profiles")
       .insert({
         id: user.id,
-        display_name: user.user_metadata?.display_name || user.email?.split("@")[0] || "User",
+        display_name:
+          user.user_metadata?.display_name ??
+          user.email?.split("@")[0] ??
+          "User",
         experience_points: 0,
         xp: 0,
         level: 1,
       })
-      .select()
-      .single();
-    
-    if (createError || !newProfile) {
-      console.error("Error creating profile:", createError);
-      redirect("/auth/login");
-      return null;
+
+    if (createError) {
+      console.error("Profile creation failed:", createError)
+      redirect("/auth/login")
     }
-    
-    redirect("/onboarding");
-    return null;
+
+    redirect("/onboarding")
   }
 
-  // Get lesson details
+  /* ---------------- LESSON ---------------- */
   const { data: lesson, error: lessonError } = await supabase
     .from("lessons")
     .select("*, courses(*)")
-    .eq("id", lessonId)
+    .eq("id", lessonId) // change to Number(lessonId) if ID is integer
     .maybeSingle()
 
-  if (!lesson) {
-    redirect("/courses")
+  if (lessonError) {
+    console.error("Lesson query error:", lessonError)
   }
 
-  // Get or create user progress
+  if (!lesson) {
+    notFound()
+  }
+
+  /* ---------------- PROGRESS ---------------- */
   const { data: existingProgress } = await supabase
     .from("user_lesson_progress")
     .select("*")
@@ -68,7 +84,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
   let progress = existingProgress
 
   if (!existingProgress) {
-    const { data: newProgress } = await supabase
+    const { data: newProgress, error } = await supabase
       .from("user_lesson_progress")
       .insert({
         user_id: user.id,
@@ -79,10 +95,15 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
       })
       .select()
       .single()
+
+    if (error) {
+      console.error("Progress creation error:", error)
+    }
+
     progress = newProgress
   }
 
-  // Get all lessons in this course for navigation
+  /* ---------------- NAVIGATION ---------------- */
   const { data: allLessons } = await supabase
     .from("lessons")
     .select("id, title, order_index")
@@ -90,22 +111,33 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
     .eq("is_published", true)
     .order("order_index")
 
-  const currentIndex = allLessons?.findIndex((l: any) => l.id === lessonId) || 0
-  const nextLesson = allLessons?.[currentIndex + 1]
-  const prevLesson = allLessons?.[currentIndex - 1]
+  const currentIndex =
+    allLessons?.findIndex((l) => l.id === lessonId) ?? 0
 
+  const nextLesson = allLessons?.[currentIndex + 1] ?? null
+  const prevLesson = allLessons?.[currentIndex - 1] ?? null
+
+  /* ---------------- DICTIONARY TERMS ---------------- */
   const { data: lessonTerms } = await supabase
     .from("lesson_dictionary_terms")
     .select("dictionary_terms(*)")
     .eq("lesson_id", lessonId)
 
-  // Extract the dictionary terms from the nested structure
-  const dictionaryTerms = lessonTerms?.map((lt: any) => lt.dictionary_terms) || []
+  const dictionaryTerms =
+    lessonTerms?.map((lt: any) => lt.dictionary_terms) ?? []
 
+  /* ---------------- RENDER ---------------- */
   return (
     <div className="min-h-screen bg-background">
       <AppHeader profile={profile} />
-      <LessonTimeTracker userId={user.id} lessonId={lessonId} courseId={lesson.course_id} moduleId={lesson.module_id} />
+
+      <LessonTimeTracker
+        userId={user.id}
+        lessonId={lessonId}
+        courseId={lesson.course_id}
+        moduleId={lesson.module_id}
+      />
+
       <LessonContent
         lesson={lesson}
         progress={progress}
@@ -114,6 +146,7 @@ export default async function LessonPage({ params }: { params: Promise<{ lessonI
         prevLesson={prevLesson}
         dictionaryTerms={dictionaryTerms}
       />
+
       <AccessibilityToolbar />
     </div>
   )
