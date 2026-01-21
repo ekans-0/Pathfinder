@@ -2,33 +2,33 @@
 
 Pathfinder is a specialized, highly accessible learning platform designed to empower individuals with disabilities to understand their rights and advocate for themselves. Developed with a focus on inclusivity, the platform provides a structured, interactive educational journey tailored to diverse learning needs.
 
-## 🌟 Key Features
+## Key Features
 
-### 🧩 Inclusive Design & Accessibility
+### Inclusive Design & Accessibility
 - **Personalized Onboarding**: Tailors the platform experience based on user-selected accessibility needs (Dyslexia, ADHD, Visual Impairment, etc.).
 - **Dynamic Accessibility Toolbar**: Real-time adjustment of font size, contrast themes, and text spacing.
 - **Easy-Read Mode**: Automatic conversion of lesson content into simplified, high-comprehension formats.
 - **Text-to-Speech (TTS)**: Integrated narration for all educational materials.
 
-### 📚 Educational Content
+### Educational Content
 - **Structured Modules**: Multi-course curriculum covering ADA basics, self-advocacy, and legal rights.
 - **Interactive Scenarios**: Real-world role-playing elements to practice advocacy skills.
 - **Knowledge Reinforcement**: Spaced-repetition flashcards and lesson-specific quizzes.
 - **Digital Dictionary**: Comprehensive library of legal and disability-related terms with simplified definitions.
 
-### 🎮 Gamified Engagement
+### Gamified Engagement
 - **Progress Tracking**: Detailed analytics on lesson completion and time spent.
 - **Achievement System**: Earn XP, level up, and unlock digital badges for milestones.
 - **AI Learning Assistant**: 24/7 guidance and clarification on complex concepts.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: [Next.js 15](https://nextjs.org/) (App Router), [Tailwind CSS](https://tailwindcss.com/), [Shadcn UI](https://ui.shadcn.com/)
 - **Backend**: [Supabase](https://supabase.com/) (Auth, Database, Edge Functions)
 - **State Management**: [Zustand](https://zustand-demo.pmnd.rs/)
 - **Icons & Motion**: [Lucide React](https://lucide.dev/), [Framer Motion](https://www.framer.com/motion/)
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── src/
@@ -46,7 +46,7 @@ Pathfinder is a specialized, highly accessible learning platform designed to emp
 └── public/                     # Optimized static assets and icons
 ```
 
-## ⚙️ Development Setup
+## Development Setup
 
 1. **Clone & Install**:
    ```bash
@@ -70,6 +70,6 @@ Pathfinder is a specialized, highly accessible learning platform designed to emp
    npm run dev
    ```
 
-## 📜 License
+## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is owned by SMCS at Poolesville High School in Poolesville, Maryland.

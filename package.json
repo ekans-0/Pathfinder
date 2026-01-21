@@ -1,11 +1,10 @@
 {
-  "name": "my-v0-project",
+  "name": "Pathfinder Web App",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
-    "lint": "eslint ."
+    "dev": "next dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
